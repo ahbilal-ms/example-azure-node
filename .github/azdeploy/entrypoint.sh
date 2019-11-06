@@ -3,7 +3,7 @@
 set -e
 
 echo "Login"
-az login --service-principal --username "${SERVICE_PRINCIPAL}" --password "${SERVICE_PASS}" --tenant "${TENANT_ID}"
+az login --service-principal --username "${SERVICE_PRINCIPAL}" --tenant "${TENANT_ID}"
 
 echo "Creating resource group ${APPID}-group"
 az group create -n ${APPID}-group -l westcentralus
